@@ -28,7 +28,7 @@
     "grunt-nodemon": "^0.3.0",
     "nunjucks": "~1.1.0",
     "resume": "thetmkay/resume",
-    "subdomain": "~1.2.0"
+    "subdomain": "thetmkay/subdomain"
   },
   "devDependencies": {
     "grunt-node-inspector": "^0.1.5"

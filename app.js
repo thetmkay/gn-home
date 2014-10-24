@@ -15,7 +15,6 @@
    */
 
   // all environments
-  app.set('port', process.env.PORT || 3000);
   app.engine('html', cons.nunjucks);
   app.set('view engine', 'html');
   app.use(express.static(path.join(__dirname, 'public')));
