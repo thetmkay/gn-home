@@ -1,0 +1,147 @@
+{
+    "basics": {
+        "name": "George Nishimura",
+        "label": "Software Developer",
+        "picture": "",
+        "email": "me@georgenishimura.com",
+        "phone": "+447478676935",
+        "website": "http://georgenishimura.com/resume",
+        "summary": "George is a full-stack software developer interested in user experience and problem-solving. He is currently studying in his final year at Imperial College, and has previously interned at Upstatement and Microsoft.",
+        "location": {
+            "address": "40 Palace Mansions",
+            "postalCode": "W14 8QW",
+            "city": "London",
+            "countryCode": "UK",
+            "region": "London"
+        },
+        "profiles": [{
+            "network": "Home",
+            "username": "thetmkay",
+            "url": "georgenishimura.com"
+        },{
+            "network": "LinkedIn",
+            "username": "",
+            "url": "linkedin.com/in/nishimurag"
+        }, {
+            "network": "GitHub",
+            "username": "thetmkay",
+            "url": "github.com/thetmkay"
+        }, {
+            "network": "Twitter",
+            "username": "thetmkay",
+            "url": "twitter.com/thetmkay"
+        }]
+    },
+    "work": [{
+        "company": "Upstatement",
+        "position": "Development Intern",
+        "website": "http://upstatement.com",
+        "startDate": "2014-04-16",
+        "endDate": "2014-09-19",
+        "summary": "5-month internship at Upstatement, a web design firm in Boston specializing in building modern, responsive sites for editorial clients",
+        "highlights": [
+            "Built and maintained full WordPress stack for Lattice Engines",
+            "Implemented complex interactive designs in Sass, Javascript and HTML",
+            "Wrote open-source Javascript libraries Quickshare and Skrollr.Utilities"
+        ]
+    }, {
+        "company": "Microsoft",
+        "position": "SDET Intern",
+        "website": "http://microsoft.com",
+        "startDate": "2013-07-01",
+        "endDate": "2013-09-20",
+        "summary": "12-week internship at Microsoft's Redmond Campus as part of the Surface Music Kit app team in the Windows Division",
+        "highlights": [
+            "Development of internal ASP.Net MVC web app",
+            "Windows App UI Automation and tools script authoring",
+            "Feature test owner and member of scrum"
+        ]
+    }, {
+        "company": "Griffins FRC Team 1884",
+        "position": "Mentor",
+        "website": "http://griffins1884.com",
+        "startDate": "2012-01-04",
+        "endDate": "2014-04-21",
+        "summary": "Annual mentoring of high school students in Team 1884, the UK's only First Robotics Competition team",
+        "highlights": [
+            "Fellowship award winner, former captain and member since 07/08",
+            "Teach strategy, engineering design, programming & electronics",
+            "Six-week build season followed by a competition in the US"
+        ]
+    }],
+    "volunteer": [],
+    "education": [{
+        "institution": "Imperial College London",
+        "area": "Computing",
+        "studyType": "Masters of Engineering (undergraduate)",
+        "startDate": "2011-10-01",
+        "endDate": "2015-06-28",
+        "gpa": "Predicted 1st",
+        "courses": [
+            "Software Engineering", "Networks & Communication", "Human Centered Design", "Advanced Databases", "Machine Learning"
+        ]
+    }, {
+        "institution": "American School in London",
+        "area": "",
+        "studyType": "High School Diploma",
+        "startDate": "2001-09-04",
+        "endDate": "2011-06-17",
+        "gpa": "10 AP Exams of Score 5",
+        "courses":[]
+    }],
+    "awards": [{
+        "title": "2nd Year Group Project Prize Winner",
+        "date": "2013-06-19",
+        "awarder": "IBM",
+        "summary": "For commentTree, a MEAN (Mongo-Express-Angular-Node) web app to provide a richer interactive experience to live text commentaries (<a href=\"#\" class=\"link\">georgenishimura.com/commenttree</a>)"
+    }],
+    "publications": [],
+    "skills": [{
+        "name": "Languages",
+        "level": "Moderate",
+        "keywords": [
+            "HTML", "Javascript", "Sass", "Java",  "C","C++", "C#","PostgreSQL", "Python", "Ruby", "Assembly", "Haskell"
+        ]
+    }, {
+        "name": "Frameworks",
+        "level": "Moderate",
+        "keywords": [
+            "Node.js", "jQuery", "Angular", "Grunt", "Express", "WordPress",  "Mongo", "Meteor", "iOS", "ASP.NET"
+        ]
+    }, {
+        "name": "Tools",
+        "level": "Moderate",
+        "keywords": [
+            "Unix", "Sublime Text", "Git", "Xcode", "Eclipse", "Vim", "Microsoft Office", "Photoshop"
+        ]
+    }, {
+        "name": "Processes",
+        "level": "Moderate",
+        "keywords": [
+            "Scrum", "BDD", "XP"
+        ]
+    }],
+    "languages": [{
+        "language": "English",
+        "fluency": "Native"
+    }, {
+        "language": "Japanese",
+        "fluency": "Intermediate"
+    }, {
+        "language": "French",
+        "fluency": "Intermediate"
+    }],
+    "interests": [{
+        "name": "FIRST Robotics",
+        "keywords": [
+            "Griffins 1884"
+        ]
+    }, {
+        "name": "Ultimate Frisbee",
+        "keywords": ["Imperial discDoctors"]
+    }, {
+        "name": "Hackathons & Tech Meetups",
+        "keywords": []
+    }],
+    "references": []
+}

@@ -1,0 +1,197 @@
+$skill-font-size: 12px;
+$skill-height: $skill-font-size + 4px;
+$skill-level-height: 3px;
+$skill-level-gap: 2px;
+$skill-level-width: 0.6em;
+$skill-level-total-height: (3 * $skill-level-height) + (2 * $skill-level-gap);
+$skill-level-centering: ($skill-height - $skill-level-total-height)/2;
+
+$skill-level-color: white;
+
+
+@mixin gradient-tokens($color, $txt-color:white) {
+
+	.skill-token-mod {
+		color: $txt-color;
+	}
+
+	.skill-token-mod.advanced{
+		background-color: $color;
+
+		&:hover {
+			background-color: darken($color, 7);
+		}
+	}
+
+	.skill-token-mod.master {
+		background-color: lighten($color, 7);
+
+		&:hover {
+			background-color: $color;
+		}
+	}
+
+	.skill-token-mod.moderate {
+		background-color: darken($color, 7);
+
+		&:hover {
+			background-color: darken($color, 14);
+		}
+	}
+}
+
+@media screen {
+
+	.skills-block.languages {
+		@include gradient-tokens(#36802D);
+	}
+
+	.skills-block.frameworks {
+		@include gradient-tokens(#029DAF);
+	}
+
+	.skills-block.tools {
+		.skill-token-mod {
+			color: white;
+			background-color: #E33258;
+
+			&:hover {
+				pointer: cursor;
+				background-color: darken(#E33258, 7);
+			}
+		}
+	}
+
+	.skills-block.processes {
+
+		.skill-token-mod {
+			color: white;
+			background-color: #F59330;
+
+			&:hover {
+				pointer: cursor;
+				background-color: darken(#F59330, 7);
+			}
+		}
+	}
+
+}
+
+
+
+.skill-token-mod {
+	padding: 0.35em;
+	margin: 0.1em;
+	border-radius: 3px;
+	display: inline-block;
+	// border-right: solid 2px darken(green, 5);
+	// border-bottom: solid 2px darken(green, 5);
+}
+
+@mixin skill-token-animation($color, $animationname, $endtime) {
+	@include keyframes ($animationname) {
+		0% {
+			background: rgba(0,0,0,0.3);
+		}
+		#{($endtime - 5)}{
+			background: rgba(0,0,0,0.4);
+		}
+		#{$endtime}{
+			background: $color;
+		}
+
+		100%{
+			background: $color;
+		}
+	}
+}
+
+@mixin skill-token($color) {
+
+	&:hover {
+
+		cursor: pointer;
+
+		.moderate &, .advanced &, .master & {
+			.skill-level {
+				// background: transparent;
+				@include skill-token-animation($skill-level-color, #{$color}three, 33%);
+				@include animation(#{$color}three 0.5s ease-in  0);
+			}
+		}
+
+		.advanced &, .master & {
+			&:after {
+				// background: transparent;
+				@include skill-token-animation($skill-level-color, #{$color}two, 66%);
+				@include animation(#{$color}two 0.5s ease-in  0s);
+			}
+		}
+
+		.master & {
+			&:before {
+				// background: transparent;
+
+				@include skill-token-animation($skill-level-color, #{$color}one, 100%);
+				@include animation(#{$color}one 0.5s ease-in  0s);
+			}
+		}
+	}
+
+	.moderate &, .advanced &, .master & {
+
+		padding-right: 1em;
+
+		.skill-level {
+			position: absolute;
+			right: 0;
+			bottom: $skill-level-centering;
+			width: $skill-level-width;
+			height: $skill-level-height;
+			background-color: $color;
+		}
+	}
+
+	.advanced &, .master & {
+		&:after {
+			position: absolute;
+			content: " ";
+			width: $skill-level-width;
+			height: $skill-level-height;
+			background-color: $color;
+			right: 0;
+			bottom: $skill-level-centering + $skill-level-height + $skill-level-gap;
+		}
+	}
+
+	.master & {
+		&:before {
+			position: absolute;
+			content: " ";
+			width: $skill-level-width;
+			height: $skill-level-height;
+			background-color: $color;
+			right: 0;
+			bottom: $skill-level-centering + (2 * ($skill-level-height + $skill-level-gap));
+		}
+	}
+}
+
+.skill-token {
+
+	font-size: $skill-font-size;
+	line-height: $skill-height;
+	height: $skill-height;
+	position: relative;
+}
+
+
+@media screen {
+	.skill-token {
+		@include skill-token($skill-level-color);
+	}
+
+	.skill-name {
+		display: none;
+	}
+}
