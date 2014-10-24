@@ -1,1 +1,1 @@
-web: grunt production
+web: ./node_modules/grunt-cli/bin/grunt production
