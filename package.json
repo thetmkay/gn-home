@@ -21,6 +21,7 @@
     "express": "~4.9.8",
     "consolidate": "~0.10.0",
     "nunjucks": "~1.1.0",
-    "subdomain": "~1.2.0"
+    "subdomain": "~1.2.0",
+    "resume": "./lib/resume"
   }
 }
