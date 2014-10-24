@@ -60,6 +60,6 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask('default', ['env:dev', 'hub:build','concurrent:dev']);
-    grunt.registerTask('production', ['env:prod', 'hub:build', 'concurrent:prod']);
+    grunt.registerTask('production', ['env:prod', 'hub:build', 'nodemon']);
     grunt.registerTask('remote', ['production']);
 }
