@@ -41,7 +41,10 @@ module.exports = function(grunt) {
                 }
             },
             prod: {
-                tasks: ['nodemon', 'hub:watch', 'watch']
+                tasks: ['nodemon', 'hub:watch', 'watch'],
+                options: {
+                    limit: 5
+                }
             }
         }
 
