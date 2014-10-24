@@ -3,3 +3,5 @@ config.js
 public/
 .sass-cache/
 **/**/.DS_Store
+
+lib/
