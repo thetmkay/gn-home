@@ -1,0 +1,47 @@
+html,body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+@media screen {
+
+	html, body {
+		background-color: $bg-color;
+	}
+
+	.page-container {
+		max-width: $page-width;
+		margin: 0 auto;
+	}
+
+	.resume {
+		padding: 1em;
+	}
+}
+
+.resume {
+	font-family: $body-font;
+}
+
+a {
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+@mixin link($color) {
+	color: $color;
+	cursor: pointer;
+	&:hover {
+		color: darken($color, 10);
+	}
+}
+
+.link {
+	@include link($link-blue);
+}
+
