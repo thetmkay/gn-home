@@ -7,7 +7,7 @@ var subdomain = require('subdomain'),
   path = require('path');
 
 var app = require('./app'),
-      resume = require('./lib/resume/app');
+      resume = require('resume/app');
 
 // development only
 // app.use(subdomain({ base : 'localhost', removeWWW : true }));
