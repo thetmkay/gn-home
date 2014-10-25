@@ -12,7 +12,7 @@ var app = express(),
       home = require('./app');
 
 
-var base_url;
+var base_url = 'localhost.com:3000';
 
 if(process.env.NODE_ENV === 'development') {
   base_url = 'localhost.com:3000';
