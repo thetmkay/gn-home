@@ -27,5 +27,8 @@
 
   app.get('/commenttree', function(req,res) {
     res.redirect('http://www3.imperial.ac.uk/computing/teaching/ug/webapps-distinguished-projects');
-  })
+  });
 
+  app.get('/subbr', function(req,res) {
+    res.redirect('https://twitter.com/subbrapp');
+  });

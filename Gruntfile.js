@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         },
         watch: {
             server: {
-                files: ['*.js']
+                files: ['app.js', 'server.js', 'Gruntfile.js', 'node_modules/*']
             }
         },
         nodemon: {
