@@ -2,11 +2,44 @@
 <html>
 	<head>
 		<title>Title</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:200,400,600,700' rel='stylesheet' type='text/css'>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/app.css">
 	</head>
 	<body>
-		<h1> GN HOME </h1>
-		<script src='js/jquery.js'></script>
-		<script src='js/app.js'></script>
+		<div class="page-container">
+			<div class="header">
+				<ul class="nav-list">
+					<li class="nav-item"><a href="#" class="link nav-link home">home</a></li>
+					<li class="nav-item"><a href="#" class="link nav-link work">work</a></li>
+					<li class="nav-item"><a href="#" class="link nav-link blog">blog</a></li>
+					<li class="nav-item"><a href="#" class="link nav-link resume">resume</a></li>
+				</ul>
+			</div>
+			<div class="intro-mod">
+				<div class="intro">
+				Hello! My name's George. This is my <a class="intro-link link home" href="#">home</a> to<br>
+				share my <a class="intro-link link work" href="#">work</a> on some really cool projects.  <br>
+				There are also a few notes in my <a class="intro-link link blog" href="#">blog</a>, and <br>
+				check out my <a class="intro-link link resume" href="#">resume</a> if you're interested.<br>
+				</div>
+			</div>
+			<div class="social-nav">
+				<ul class="social-list">
+					<li class="social-item"><a href="#" class="link social-link github"><i class="fa fa-lg fa-envelope-square social-icon email"></i><span class="link-text email" data-hover="me@georgenishimura.com">email</span></a></li>
+					<li class="social-item"><a href="#" class="link social-link twitter"><i class="fa fa-lg fa-twitter-square social-icon twitter"></i><span class="link-text twitter" data-hover="thetmkay">twitter</span></a></li>
+					<li class="social-item"><a href="#" class="link social-link linkedin"><i class="fa fa-lg fa-linkedin-square social-icon linkedin"></i><span class="link-text linkedin" data-hover="georgenishimura">linkedin</span></a></li>
+				</ul>
+			</div>
+			<div class="section" data-top="background-position:fixed" data-bottom="background-position:initial">
+			</div>
+			<div class="filler">
+
+			</div>
+		</div>
+		<script src='/components/jquery/dist/jquery.js'></script>
+		<script src='/components/skrollr/dist/skrollr.min.js'></script>
+		<script src='/components/skrollr.utilities/dist/skrollr.utilities.js'></script>
+		<script src='/js/app.js'></script>
 	</body>
 </html>

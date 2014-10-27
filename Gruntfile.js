@@ -35,15 +35,23 @@ module.exports = function(grunt) {
         },
         concurrent: {
             dev: {
-                tasks: ['nodemon', 'hub:watch', 'node-inspector', 'watch:server'],
+                tasks: ['nodemon', 'compass','hub:watch', 'node-inspector', 'watch:server'],
                 options: {
                     logConcurrentOutput: true
                 }
             },
             prod: {
-                tasks: ['nodemon', 'hub:watch', 'watch'],
+                tasks: ['nodemon',  'compass','hub:watch', 'watch'],
                 options: {
                     limit: 5
+                }
+            }
+        },
+        compass: {
+            all: {
+                options: {
+                    sassDir: 'src/scss',
+                    cssDir: 'public/css',
                 }
             }
         }
@@ -56,6 +64,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-node-inspector');
+    grunt.loadNpmTasks('grunt-contrib-compass');
 
 
 

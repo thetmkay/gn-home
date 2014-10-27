@@ -1,0 +1,212 @@
+.nav-link {
+	color: #ddd;
+	font-family: #{$home-font};
+	font-weight: bold;
+}
+
+@include keyframes(socialfixed) {
+	0% {
+		top: 2em;
+	}
+	100% {
+		top: 2.5em;
+	}
+}
+
+.social-nav.fixed {
+	position: fixed;
+	top: 2.5em;
+	// padding-top: 0.5em;
+	@include animation(socialfixed 0.25s);
+}
+
+
+@include keyframes(navpop) {
+	0% {
+		color: #ddd;
+		font-size: 16px;
+	}
+	50% {
+		color: $green;
+		font-size: 17px;
+	}
+	100% {
+		color: $green;
+		font-size: 16px;
+	}
+}
+
+@include keyframes(socialleft) {
+	0% {
+		font-size: 24px;
+		left: -8px;
+		opacity: 0;
+	}
+	100% {
+		font-size: 28px;
+		left: -15px;
+		opacity: 0.8;
+	}
+}
+
+@include keyframes(socialright) {
+	0% {
+		font-size: 26px;
+		right: -8px;
+		opacity: 0;
+	}
+	100% {
+		font-size: 26px;
+		right: -15px;
+		opacity: 0.8;
+	}
+}
+
+.nav-link.animate {
+	@include animation(navpop 0.25s);
+	color: $green;
+	font-size: 16px;
+}
+
+.nav-link:hover {
+	color: $green;
+}
+
+.nav-link.animate:hover {
+	border-bottom: solid 2px $green;
+}
+
+
+.nav-item {
+	display: inline-block;
+	width: 22.5%;
+}
+
+.nav-list {
+	list-style-type: none;
+	text-align: center;
+	padding: 0 5%;
+	margin: 0;
+}
+
+.social-link {
+	color: white;
+	font-family: #{$home-font};
+	font-weight: 600;
+	line-height: 1em;
+	position: relative;
+}
+
+.social-link:hover {
+
+	&:before, &:after {
+
+		// @include animation(socialhovertb 0.5s);
+
+		position: absolute;
+		font-size: 28px;
+		font-weight: 200;
+		top: 0;
+		bottom: 0;
+	}
+
+	&:before {
+		@include animation(socialleft 0.25s);
+		content: "[";
+		left: -15px;
+		// transform: translateX(-10px);
+		// transition: transform 0.4s;
+		// font-size: 28px;
+	}
+
+	&:after {
+		@include animation(socialright 0.25s);
+		right: -15px;
+		content: "]";
+		// transform: translateX(10px);
+		// transition: transform 0.4s;
+		// font-size: 28px;
+
+	}
+}
+
+
+
+.social-icon {
+	padding-right: 4px;
+}
+
+.social-list {
+	list-style-type: none;
+	text-align: center;
+	padding: 0 12.5%;
+	margin: 0;
+}
+
+.social-item {
+	display: inline-block;
+	width: 25%;
+	position: relative;
+}
+
+.social-nav {
+	width: 100%;
+	background-color: $green;
+	padding: 0.5em;
+	// padding-top: 0.5em;
+}
+
+.header {
+	width: 100%;
+	position: fixed;
+	padding: 0.5em 0;
+	// height: 3em;
+	background-color: white;
+	z-index: 1;
+	border-bottom: solid 2px lighten($green, 10);
+}
+
+.intro-mod {
+	width: 100%;
+	background-color: $green;
+	padding-top: 3em;
+	min-height: 400px;
+	position: relative;
+}
+
+.intro {
+	max-width: 380px;
+	margin: auto;
+	font-family: #{$home-font};
+	color: white;
+	font-weight: 200;
+	letter-spacing: 1px;
+	position: absolute;
+	top: 3em;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 6em;
+}
+
+.intro-link {
+	// background-color: darken($green, 5);
+	color: white;
+	line-height: 1.5em;
+	font-weight: 600;
+}
+
+.intro-link:hover {
+	font-weight: 600;
+	border-bottom: solid 1px white;
+}
+
+.filler {
+	height: 900px;
+}
+
+.section {
+	width: 100%;
+	height: 500px;
+	background-image: url(/img/bus.jpg);
+}
