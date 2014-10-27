@@ -62,6 +62,15 @@
 	}
 }
 
+@include keyframes(socialslide) {
+	0% {
+		top: 1.5em;
+	}
+	100% {
+		top: 0em;
+	}
+}
+
 .nav-link.animate {
 	@include animation(navpop 0.25s);
 	color: $green;
@@ -89,45 +98,69 @@
 	margin: 0;
 }
 
+.social-link.email {
+	min-width: 250px;
+}
+
+.social-link.github, .social-link.twitter {
+	min-width: 130px;
+}
+
 .social-link {
 	color: white;
 	font-family: #{$home-font};
 	font-weight: 600;
 	line-height: 1em;
 	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	width: 100%;
+	padding: 0.2em 0;
+
+	.link-text {
+		position: relative;
+		top: 1.9em;
+		height: 1em;
+		font-weight: 200;
+
+		@include mq($med-width) {
+			font-weight: 200;
+			@include prefixer(transition, top 0.4s, webkit ms moz);
+		}
+
+	}
+
+	& .link-text:before {
+		padding: 0 2px;
+		position: absolute;
+		top: -1.7em;
+		content: attr(data-hover);
+		font-weight: 200;
+
+		@include mq($med-width) {
+			font-weight: 600;
+		}
+	}
+
 }
 
 .social-link:hover {
 
-	&:before, &:after {
+	& .link-text {
 
-		// @include animation(socialhovertb 0.5s);
-
-		position: absolute;
-		font-size: 28px;
+		@include prefixer(transition, font-weight 0.4s, webkit ms moz);
 		font-weight: 200;
-		top: 0;
-		bottom: 0;
+
+		@include mq($med-width) {
+			@include prefixer(transition, top 0.4s, webkit ms moz);
+			top: 0em;
+		}
 	}
 
-	&:before {
-		@include animation(socialleft 0.25s);
-		content: "[";
-		left: -15px;
-		// transform: translateX(-10px);
-		// transition: transform 0.4s;
-		// font-size: 28px;
+	& .link-text:before {
+		font-weight: 600;
 	}
 
-	&:after {
-		@include animation(socialright 0.25s);
-		right: -15px;
-		content: "]";
-		// transform: translateX(10px);
-		// transition: transform 0.4s;
-		// font-size: 28px;
-
-	}
 }
 
 
@@ -139,13 +172,13 @@
 .social-list {
 	list-style-type: none;
 	text-align: center;
-	padding: 0 12.5%;
+	padding: 0 5%;
 	margin: 0;
 }
 
 .social-item {
 	display: inline-block;
-	width: 25%;
+	width: 30%;
 	position: relative;
 }
 
