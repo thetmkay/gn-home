@@ -43,3 +43,7 @@
   app.get('/subbr', function(req,res) {
     res.redirect('https://twitter.com/subbrapp');
   });
+
+  app.get('*', function(req,res) {
+    res.render('404-page');
+  })
