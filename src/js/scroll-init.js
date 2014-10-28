@@ -35,7 +35,7 @@
         });
 
         var s = skrollr.init({
-            forceHeight: true,
+            forceHeight: false,
             keyframe: helper.keyframeHandlerFn
         });
     });

@@ -2,6 +2,7 @@
 	width: 100%;
 	max-width: $max-width;
 	margin: 0 auto;
+	font-family: #{$home-font};
 }
 
 .intro-mod {
@@ -18,7 +19,6 @@
 .intro {
 	max-width: 380px;
 	margin: auto;
-	font-family: #{$home-font};
 	color: white;
 	font-weight: 200;
 	letter-spacing: 1px;
