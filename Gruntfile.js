@@ -23,6 +23,10 @@ module.exports = function(grunt) {
         watch: {
             server: {
                 files: ['app.js', 'server.js', 'Gruntfile.js', 'node_modules/*']
+            },
+            js: {
+              files: ['src/js/scroll-init.js'],
+              tasks: ['concat']
             }
         },
         nodemon: {
@@ -35,7 +39,7 @@ module.exports = function(grunt) {
         },
         concurrent: {
             dev: {
-                tasks: ['nodemon', 'compass', 'hub:watch', 'node-inspector', 'watch:server'],
+                tasks: ['nodemon', 'compass', 'hub:watch', 'node-inspector', 'watch'],
                 options: {
                     logConcurrentOutput: true
                 }
