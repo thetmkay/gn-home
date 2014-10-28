@@ -1,7 +1,5 @@
 .nav-link {
 	color: #ddd;
-	font-family: #{$home-font};
-	font-weight: bold;
 }
 
 @include keyframes(socialfixed) {
@@ -83,19 +81,6 @@
 
 .nav-link.animate:hover {
 	border-bottom: solid 2px $green;
-}
-
-
-.nav-item {
-	display: inline-block;
-	width: 22.5%;
-}
-
-.nav-list {
-	list-style-type: none;
-	text-align: center;
-	padding: 0 5%;
-	margin: 0;
 }
 
 .social-link.email {
@@ -191,11 +176,7 @@
 }
 
 .header {
-	width: 100%;
 	position: fixed;
-	padding: 0.5em 0;
-	// height: 3em;
-	background-color: white;
 	z-index: 1;
 	border-bottom: solid 2px lighten($green, 10);
 }

@@ -5,7 +5,8 @@
   var express = require('express'),
     http = require('http'),
     path = require('path'),
-    cons = require('consolidate');
+    cons = require('consolidate'),
+    nunjucks = require('nunjucks');
 
   var app = module.exports = express();
 
@@ -13,6 +14,14 @@
   /**
    * Configuration
    */
+  var view_paths = [
+    path.join(__dirname,'views'),
+    path.join(__dirname, 'node_modules', 'gn_components', 'views')
+  ];
+
+  var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(view_paths));
+
+  env.express(app);
 
   // all environments
   app.engine('html', cons.nunjucks);
