@@ -29,8 +29,10 @@
   app.use(express.static(path.join(__dirname, 'public')));
   // app.use(app.router);
 
+  var footer = require('./json/footer');
+
   app.get('/', function(req,res) {
-    res.render('index');
+    res.render('index', footer);
   });
 
 

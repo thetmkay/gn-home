@@ -1,0 +1,10 @@
+{
+    "acknowledgements":[{
+        "name":"Skrollr",
+        "link":"https://github.com/Prinzhorn/skrollr"
+    },
+    {
+        "name":"Skrollr.Utilities",
+        "link":"https://github.com/thetmkay/skrollr.utilities"
+    }]
+}
