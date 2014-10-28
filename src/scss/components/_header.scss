@@ -1,0 +1,70 @@
+@import "gn/header";
+
+@include keyframes(navpop) {
+	0% {
+		color: #ddd;
+		font-size: 16px;
+	}
+	50% {
+		color: $green;
+		font-size: 17px;
+	}
+	100% {
+		color: $green;
+		font-size: 16px;
+	}
+}
+
+.header {
+	color: $green;
+	border-bottom: solid 2px lighten($green, 10);
+
+	@include mq($nav-collapse-width) {
+		position: fixed;
+		z-index: 1;
+		max-width: $max-width;
+	}
+}
+
+.open-menu .nav-menu-trigger {
+	color: #aaa;
+}
+
+.nav-menu-trigger {
+	color: $green;
+}
+
+.nav-menu-trigger:hover {
+	color: darken($green, 10);
+}
+
+.nav-link {
+	color: $green;
+
+	@include mq($nav-collapse-width) {
+		color: #eee;
+	}
+}
+
+.nav-link.animate {
+	@include mq($nav-collapse-width) {
+		@include animation(navpop 0.25s);
+	}
+	color: $green;
+	font-size: 16px;
+}
+
+.nav-link:hover {
+	background-color: #ddd;
+
+	@include mq($nav-collapse-width) {
+		color: $green;
+		background: #fff;
+	}
+}
+
+.nav-link.animate:hover {
+	@include mq($nav-collapse-width) {
+		border-bottom: solid 2px $green;
+	}
+}

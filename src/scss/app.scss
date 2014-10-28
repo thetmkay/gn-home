@@ -1,6 +1,8 @@
 @import "variables";
-@import "universal";
 @import "mixins";
+@import "universal";
 @import "home";
-@import "header";
+@import "components/header";
+@import "components/socialnav";
+
 
