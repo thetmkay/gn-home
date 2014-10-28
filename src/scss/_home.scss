@@ -7,9 +7,12 @@
 .intro-mod {
 	width: 100%;
 	background-color: $green;
-	padding-top: 3em;
-	min-height: 400px;
 	position: relative;
+
+	@include mq($intro-width) {
+		padding-top: 3em;
+		min-height: 400px;
+	}
 }
 
 .intro {
@@ -19,12 +22,21 @@
 	color: white;
 	font-weight: 200;
 	letter-spacing: 1px;
-	position: absolute;
-	top: 3em;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 6em;
+	padding: 4em 0;
+	text-align: center;
+	font-size: 12px;
+
+	@include mq($intro-width) {
+		top: 3em;
+		text-align: left;
+		font-size: 16px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 6em;
+		padding: 0;
+	}
 }
 
 .intro-link {
