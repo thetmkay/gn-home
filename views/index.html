@@ -6,33 +6,14 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:200,400,600,700' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
-
 <body>
     <div class="page-container" id="skrollr-body">
         {% include 'header.html' %}
-        <div class="intro-mod">
-            <div class="intro">
-                Hello! My name's George. This is my <a class="intro-link link home" href="#">home</a> to
-                <br>share my <a class="intro-link link work" href="#">work</a> on some really cool projects.
-                <br>There are also a few notes in my <a class="intro-link link blog" href="#">blog</a>, and
-                <br>check out my <a class="intro-link link resume" href="#">resume</a> if you're interested.
-                <br>
-            </div>
-        </div>
-        <div class="social-nav">
-            <ul class="social-list">
-                <li class="social-item"><a target="_blank" href="mailto:me@georgenishimura.com" class="link social-link email"><i class="fa fa-lg fa-envelope-square social-icon email"></i><span class="link-text email" data-hover="email">me@georgenishimura.com</span></a>
-                </li>
-                <li class="social-item"><a target="_blank" href="https://github.com/thetmkay" class="link social-link github"><i class="fa fa-lg fa-github-square social-icon github"></i><span class="link-text github" data-hover="github">thetmkay</span></a>
-                </li>
-                <li class="social-item"><a target="_blank" href="https://twitter.com/thetmkay" class="link social-link twitter"><i class="fa fa-lg fa-twitter-square social-icon twitter"></i><span class="link-text twitter" data-hover="twitter">@thetmkay</span></a>
-                </li>
-
-            </ul>
-        </div>
+        {% include 'partials/intro.html' %}
+        {% include 'partials/social-nav.html' %}
         {% include 'maintenance.html' %}
         {% include 'footer.html' %}
     </div>
