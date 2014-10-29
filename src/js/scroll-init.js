@@ -4,7 +4,6 @@
     $(document).ready(function() {
 
         var header_height = $('.header').height();
-        console.log(header_height);
         var helper = SkrollrUtilities.getHelper();
 
         var links = ['home', 'work', 'blog', 'resume'];
@@ -30,11 +29,9 @@
 
         helper.onKeyframeEvent($('.social-nav'), 'data-' + (social_nav - 15), function(element, name, direction) {
             $(element).addClass('fixed');
-            console.log('hello');
         });
         helper.onKeyframeEvent($('.social-nav'), 'data-' + (social_nav - 16), function(element, name, direction) {
             $(element).removeClass('fixed');
-            console.log('hello');
         });
 
         if(Modernizr && Modernizr.touch) {
