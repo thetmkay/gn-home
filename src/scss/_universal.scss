@@ -7,9 +7,16 @@ html, body {
 	padding: 0;
 	height: 100%;
 	width: 100%;
-	background-color: #A8CABA;
+	background-color: $bg-green;
 }
 
 a {
 	text-decoration: none;
+}
+
+.page-container {
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+	font-family: #{$home-font};
 }

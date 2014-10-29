@@ -63,9 +63,13 @@ module.exports = function(grunt) {
             options: {
                 separator: ';',
             },
-            dist: {
-                src: ['node_modules/jquery/dist/jquery.js', 'node_modules/skrollr/src/skrollr.js', 'node_modules/skrollr.utilities/dist/skrollr.utilities.js', 'node_modules/gn_components/js/header.js', 'src/js/*.js'],
-                dest: 'public/js/bundle.js',
+            home: {
+                src: ['node_modules/jquery/dist/jquery.js', 'node_modules/skrollr/src/skrollr.js', 'node_modules/skrollr.utilities/dist/skrollr.utilities.js', 'node_modules/gn_components/js/header.js', 'src/js/scroll-init.js'],
+                dest: 'public/js/home.js',
+            },
+            "404": {
+                src: ['node_modules/jquery/dist/jquery.js', 'node_modules/gn_components/js/header.js'],
+                dest: 'public/js/404.js',
             },
         }
 
