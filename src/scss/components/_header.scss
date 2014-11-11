@@ -42,7 +42,7 @@
 	color: $green;
 
 	@include mq($nav-collapse-width) {
-		color: #eee;
+		color: #ddd;
 	}
 }
 
@@ -55,7 +55,7 @@
 }
 
 .nav-link:hover {
-	background-color: #ddd;
+	background-color: #aaa;
 
 	@include mq($nav-collapse-width) {
 		color: $green;
