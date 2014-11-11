@@ -37,11 +37,12 @@
 	color: white;
 	line-height: 1.5em;
 	font-weight: 600;
+	border-bottom: solid 2px lighten($green, 5);
 }
 
 .intro-link:hover {
 	font-weight: 600;
-	border-bottom: solid 1px white;
+	border-bottom: solid 2px white;
 }
 
 
