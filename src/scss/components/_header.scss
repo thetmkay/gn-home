@@ -55,7 +55,7 @@
 }
 
 .nav-link:hover {
-	background-color: #aaa;
+	background-color: #ddd;
 
 	@include mq($nav-collapse-width) {
 		color: $green;
