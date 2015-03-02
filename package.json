@@ -34,7 +34,8 @@
     "resume": "thetmkay/resume",
     "skrollr": "^0.6.26",
     "skrollr.utilities": "thetmkay/skrollr.utilities",
-    "subdomain": "thetmkay/subdomain"
+    "subdomain": "thetmkay/subdomain",
+    "teaching":"thetmkay/teaching"
   },
   "devDependencies": {
     "grunt-node-inspector": "^0.1.5"

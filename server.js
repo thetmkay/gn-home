@@ -9,6 +9,7 @@ var subdomain = require('subdomain'),
 
 var app = express(),
       resume = require('resume'),
+      teaching = require('teaching'),
       home = require('./app');
 
 
@@ -32,6 +33,7 @@ app.use(subdomain({ base : base_url, removeWWW : true, debug:true, domains:['res
 //   next();
 // });
 app.use('/resume', resume);
+app.use('/teaching', teaching);
 app.use('/', home);
 /**
  * Start Server
