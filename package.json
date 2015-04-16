@@ -1,7 +1,7 @@
 {
   "name": "home",
   "version": "0.0.0",
-  "description": "gn home",
+  "description": "homepage and root for all the gn website",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
