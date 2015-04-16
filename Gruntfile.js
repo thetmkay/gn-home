@@ -47,7 +47,8 @@ module.exports = function(grunt) {
             prod: {
                 tasks: ['nodemon', 'compass', 'hub:watch', 'watch'],
                 options: {
-                    limit: 5
+                    limit: 5,
+                    logConcurrentOutput: true
                 }
             }
         },
