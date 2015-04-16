@@ -1,13 +1,19 @@
 @import "gn/footer";
 
+$link-blue: #007ec5;
+
 .footer {
-	border-top: solid 2px lighten($green, 10);
+//	border-top: solid 2px lighten($green, 10);
+//background-color: black;
+//color: white;
+background-color: #181818;
+  color: #dadada;
 }
 
-.ftr-link, , .ftr-link:active, .ftr-link:visited {
-	color: lighten($green,5);
+.ftr-link ,.footer .link, .ftr-link:active, .ftr-link:visited {
+	color: #dadada;
 
 	&:hover {
-		color: $green;
+		color:#ccc; 
 	}
 }

@@ -8,28 +8,25 @@
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 
 <body>
     <div class="main">
       <div class="intro row inv-color"><p class="row-txt">
-        Hi, I'm George. I made this website and <a href="#" class="link">a few other things</a>. 
+        Hi, I'm George. I made this website and <a href="//github.com/thetmkay" target="_blank" class="link">a few other things</a>. 
         </p></div>
-        <div class="contact row inv-color"><p class="row-txt">You can reach me through <a href="#" class="link">email</a> or <a href="#" class="link">twitter</a>. 
+        <div class="contact row inv-color"><p class="row-txt">You can reach me through <a target="_blank" href="mailto:me@georgenishimura.com" class="link">email</a> or <a target="_blank" href="//twitter.com/thetmkay" class="link">twitter</a>. 
         </p></div>
       <div class="topics row">
         <p class="row-txt topics-txt">I'm always happy to chat/learn/debate about:</p>
         <ul class="topic-list row-txt">
-          <li class="topic-item">Dystopian novels/short-stories</li>
-          <li class="topic-item">How and/or why I made this website</li>
-          <li class="topic-item">The Singularity, Ethics and Robopsychology</li>
-          <li class="topic-item">How Liverpool FC will win the league this/next year</li>
-          <li class="topic-item">Why British Kitkats are 10x better than the US ones</li>
-          <li class="topic-item">FIRST Robotics</li>
+          {% for item in topics %}
+          <li class="topic-item">{{ item }}</li>
+          {% endfor %}
         </ul>
       </div>
     </div>
+    {% include 'footer.html' %}
 </body>
 
 </html>

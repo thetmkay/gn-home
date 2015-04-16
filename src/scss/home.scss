@@ -1,5 +1,8 @@
+$green:#006F3B; 
+
 @import 'variables';
 @import 'universal';
+@import 'components/footer';
 
 .main {
 
@@ -26,7 +29,7 @@
 
 .intro.row {
   margin-top: 10%;
-  background-color:#006F3B;
+  background-color:$green;
 }
 
 
@@ -48,6 +51,18 @@
     border-bottom: solid 1px white;
   }
 
+}
+
+.topic-list a {
+  
+  &, &:visited, &:active {
+    color: #003ADB;
+  }
+
+  &:hover {
+    color: #003ADB;
+    border-bottom: solid 1px #003ADB;
+  }
 }
 
 /*.link {

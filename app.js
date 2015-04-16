@@ -30,9 +30,10 @@
   // app.use(app.router);
 
   var footer = require('./json/footer');
+  var topics = require('./json/topics');
 
   app.get('/', function(req,res) {
-    res.render('index', footer);
+    res.render('index',{topics: topics["topics"].slice(0,9)});
   });
 
 
