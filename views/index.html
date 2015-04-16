@@ -3,8 +3,7 @@
 
 <head>
     <title>Home | George Nishimura</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:200,400,600,700' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:200,400,600,700|Roboto+Slab:100,300,400,700' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -13,14 +12,24 @@
 </head>
 
 <body>
-    <div class="page-container" id="skrollr-body">
-        {% include 'header.html' %}
-        {% include 'partials/intro.html' %}
-        {% include 'partials/social-nav.html' %}
-        {% include 'maintenance.html' %}
-        {% include 'footer.html' %}
+    <div class="main">
+      <div class="intro row inv-color"><p class="row-txt">
+        Hi, I'm George. I made this website and <a href="#" class="link">a few other things</a>. 
+        </p></div>
+        <div class="contact row inv-color"><p class="row-txt">You can reach me through <a href="#" class="link">email</a> or <a href="#" class="link">twitter</a>. 
+        </p></div>
+      <div class="topics row">
+        <p class="row-txt topics-txt">I'm always happy to chat/learn/debate about:</p>
+        <ul class="topic-list row-txt">
+          <li class="topic-item">Dystopian novels/short-stories</li>
+          <li class="topic-item">How and/or why I made this website</li>
+          <li class="topic-item">The Singularity, Ethics and Robopsychology</li>
+          <li class="topic-item">How Liverpool FC will win the league this/next year</li>
+          <li class="topic-item">Why British Kitkats are 10x better than the US ones</li>
+          <li class="topic-item">FIRST Robotics</li>
+        </ul>
+      </div>
     </div>
-    <script src='/js/home.js'></script>
 </body>
 
 </html>
