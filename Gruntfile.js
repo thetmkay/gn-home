@@ -91,7 +91,7 @@ module.exports = function(grunt) {
 
 
 
-    grunt.registerTask('default', ['env:dev', 'concat', 'hub:resume', 'hub:heart', 'concurrent:dev']);
-    grunt.registerTask('production', ['env:prod', 'concat', 'hub:resume', 'hub:heart', 'concurrent:prod']);
+    grunt.registerTask('default', ['env:dev', 'concat', 'compass','hub:resume', 'hub:heart', 'concurrent:dev']);
+    grunt.registerTask('production', ['env:prod', 'concat', 'compass', 'hub:resume', 'hub:heart', 'concurrent:prod']);
     grunt.registerTask('remote', []);
 }
