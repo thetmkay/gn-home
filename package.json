@@ -1,6 +1,6 @@
 {
   "name": "home",
-  "version": "0.0.0",
+  "version": "0.2.1",
   "description": "homepage and root for all the gn website",
   "main": "server.js",
   "scripts": {
