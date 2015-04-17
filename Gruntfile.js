@@ -15,10 +15,14 @@ module.exports = function(grunt) {
                 src: "node_modules/resume/Gruntfile.js",
                 tasks: ['sub:watch']
             },
-            build: {
+            resume: {
                 src: "node_modules/resume/Gruntfile.js",
                 tasks: ['sub:build']
             },
+            heart:{
+                src: "node_modules/about-me/Gruntfile.js",
+                tasks: ['sub:build']
+            }
         },
         watch: {
             server: {
@@ -45,7 +49,7 @@ module.exports = function(grunt) {
                 }
             },
             prod: {
-                tasks: ['nodemon', 'compass', 'hub:watch', 'watch'],
+                tasks: ['nodemon'],
                 options: {
                     limit: 5,
                     logConcurrentOutput: true
@@ -87,7 +91,6 @@ module.exports = function(grunt) {
 
 
 
-    grunt.registerTask('default', ['env:dev', 'concat', 'hub:build', 'concurrent:dev']);
-    grunt.registerTask('production', ['env:prod', 'concat', 'hub:build', 'concurrent:prod']);
-    grunt.registerTask('remote', []);
+    grunt.registerTask('default', ['env:dev', 'concat', 'hub:resume', 'hub:heart', 'concurrent:dev']);
+    grunt.registerTask('production', ['env:prod', 'concat', 'hub:resume', 'hub:heart', 'concurrent:prod']);
 }

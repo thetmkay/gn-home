@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/thetmkay/gn-home",
   "dependencies": {
+    "about-me": "git://github.com/thetmkay/about-me",
     "components": "thetmkay/gn-components",
     "consolidate": "~0.10.0",
     "express": "~4.9.8",
@@ -35,7 +36,7 @@
     "skrollr": "^0.6.26",
     "skrollr.utilities": "thetmkay/skrollr.utilities",
     "subdomain": "thetmkay/subdomain",
-    "teaching":"thetmkay/teaching"
+    "teaching": "thetmkay/teaching"
   },
   "devDependencies": {
     "grunt-node-inspector": "^0.1.5"
