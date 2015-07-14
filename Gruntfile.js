@@ -4,9 +4,11 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         env: {
             dev: {
-                NODE_ENV: 'development'
+				src:'env.json',
+				NODE_ENV:'development'		
             },
             prod: {
+				src:'env.json',
                 NODE_ENV: 'production'
             }
         },
@@ -22,7 +24,11 @@ module.exports = function(grunt) {
             heart:{
                 src: "node_modules/about-me/Gruntfile.js",
                 tasks: ['sub:build']
-            }
+            },
+			books:{
+				src: "node_modules/booklist/Gruntfile.js",
+				tasks: ['sub:build']
+			}
         },
         watch: {
             server: {
@@ -91,7 +97,7 @@ module.exports = function(grunt) {
 
 
 
-    grunt.registerTask('default', ['env:dev', 'concat', 'compass','hub:resume', 'hub:heart', 'concurrent:dev']);
-    grunt.registerTask('production', ['env:prod', 'concat', 'compass', 'hub:resume', 'hub:heart', 'concurrent:prod']);
+    grunt.registerTask('default', ['env:dev', 'concat', 'compass','hub:resume','hub:books', 'hub:heart', 'concurrent:dev']);
+    grunt.registerTask('production', ['env:prod', 'concat', 'compass', 'hub:resume','hub:books', 'hub:heart', 'concurrent:prod']);
     grunt.registerTask('remote', []);
 }
