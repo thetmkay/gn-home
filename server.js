@@ -11,6 +11,7 @@ var app = express(),
       resume = require('resume'),
       teaching = require('teaching'),
       heart = require('about-me'),
+	  blog = require('gn-blog'),
 	  books = require('booklist'),
       home = require('./app');
 
@@ -26,19 +27,22 @@ if(process.env.NODE_ENV === 'production') {
 }
 
 app.set('port', process.env.PORT || 3000);
-
 // development only
 
-app.use(subdomain({ base : base_url, removeWWW : true, debug:true, domains:['resume'] }));
-// app.get('/subdomain/*', function(req,res,next) {
-//   console.log('subdomain');
-//   next();
-// });
-app.use('/resume', resume);
-app.use('/heart', heart);
-app.use('/teaching', teaching);
-app.use('/books', books);
-app.use('/', home);
+app.use(subdomain({ base : base_url, removeWWW : true, debug:true, domains:['resume','blog'] }));
+
+var router = express.Router({
+    strict       : app.get('strict routing')
+});
+
+app.use(router);
+
+router.use('/resume', resume);
+router.use('/blog', blog);
+router.use('/heart', heart);
+router.use('/teaching', teaching);
+router.use('/books', books);
+router.use('/', home);
 /**
  * Start Server
  */

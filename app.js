@@ -26,6 +26,10 @@
   // all environments
   app.engine('html', cons.nunjucks);
   app.set('view engine', 'html');
+  app.use(function(req,res,next){
+		console.log(req.url);
+		next();
+  });
   app.use(express.static(path.join(__dirname, 'public')));
   // app.use(app.router);
 

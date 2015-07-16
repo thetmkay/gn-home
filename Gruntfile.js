@@ -25,6 +25,10 @@ module.exports = function(grunt) {
                 src: "node_modules/about-me/Gruntfile.js",
                 tasks: ['sub:build']
             },
+            blog:{
+                src: "node_modules/gn-blog/Gruntfile.js",
+                tasks: ['sub:build']
+            },
 			books:{
 				src: "node_modules/booklist/Gruntfile.js",
 				tasks: ['sub:build']
@@ -97,7 +101,7 @@ module.exports = function(grunt) {
 
 
 
-    grunt.registerTask('default', ['env:dev', 'concat', 'compass','hub:resume','hub:books', 'hub:heart', 'concurrent:dev']);
-    grunt.registerTask('production', ['env:prod', 'concat', 'compass', 'hub:resume','hub:books', 'hub:heart', 'concurrent:prod']);
+    grunt.registerTask('default', ['env:dev', 'concat', 'compass','hub:resume','hub:blog','hub:books', 'hub:heart', 'concurrent:dev']);
+    grunt.registerTask('production', ['env:prod', 'concat', 'compass', 'hub:resume','hub:blog','hub:books', 'hub:heart', 'concurrent:prod']);
     grunt.registerTask('remote', []);
 }
