@@ -37,7 +37,7 @@
   var topics = require('./json/topics');
 
   app.get('/', function(req,res) {
-    res.render('index',{topics: topics["topics"].slice(0,10)});
+    res.render('index',{topics: topics["topics"].slice(0,11)});
   });
 
 
