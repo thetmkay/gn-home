@@ -23,7 +23,7 @@
   "dependencies": {
     "about-me": "git://github.com/thetmkay/about-me",
     "booklist": "thetmkay/booklist",
-    "booklist": "thetmkay/blog",
+    "blog": "thetmkay/gn-blog",
     "components": "thetmkay/gn-components",
     "consolidate": "~0.10.0",
     "express": "^4.9.8",
