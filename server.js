@@ -11,7 +11,7 @@ var app = express(),
       resume = require('resume'),
       teaching = require('teaching'),
       heart = require('about-me'),
-	  blog = require('gn-blog'),
+//	  blog = require('gn-blog'),
 	  books = require('booklist'),
       home = require('./app');
 
@@ -38,7 +38,7 @@ var router = express.Router({
 app.use(router);
 
 router.use('/resume', resume);
-router.use('/blog', blog);
+//router.use('/blog', blog);
 router.use('/heart', heart);
 router.use('/teaching', teaching);
 router.use('/books', books);
