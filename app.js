@@ -6,6 +6,7 @@
     http = require('http'),
     path = require('path'),
     cons = require('consolidate'),
+	footer = require('gn-components/footer'),
     nunjucks = require('nunjucks');
 
   var app = module.exports = express();
@@ -16,7 +17,7 @@
    */
   var view_paths = [
     path.join(__dirname,'views'),
-    path.join(__dirname, 'node_modules', 'gn_components', 'views')
+	footer.views
   ];
 
   var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(view_paths));
@@ -49,6 +50,4 @@
     res.redirect('https://twitter.com/subbrapp');
   });
 
-  app.get('*', function(req,res) {
-    res.render('404-page');
-  })
+

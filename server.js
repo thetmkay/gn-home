@@ -8,11 +8,10 @@ var subdomain = require('subdomain'),
   path = require('path');
 
 var app = express(),
-      resume = require('resume'),
-      teaching = require('teaching'),
-      heart = require('about-me'),
-//	  blog = require('gn-blog'),
-	  books = require('booklist'),
+      resume = require('gn-resume'),
+      teaching = require('gn-teaching'),
+      heart = require('gn-about-me'),
+	  books = require('gn-booklist'),
       home = require('./app');
 
 
@@ -38,7 +37,6 @@ var router = express.Router({
 app.use(router);
 
 router.use('/resume', resume);
-//router.use('/blog', blog);
 router.use('/heart', heart);
 router.use('/teaching', teaching);
 router.use('/books', books);
