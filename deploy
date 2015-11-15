@@ -1,0 +1,17 @@
+#!/usr/local/bin/zsh
+
+[[ -d .clone ]] && rm -rf .clone
+
+mkdir .clone
+cp server.js .clone/
+cp package.json .clone/
+cp app.js .clone/
+cp -rp node_modules .clone/
+cp -rp json .clone/
+cp -rp public .clone/
+cp -rp views .clone/
+
+cd .clone
+find . | grep .git | xargs rm -rf
+rsync -avz -e "ssh" ./* server@georgenishimura.com:/usr/share/nginx/html/ 
+
