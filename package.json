@@ -1,6 +1,6 @@
 {
   "name": "gn-home",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "homepage and root for all the gn website",
   "main": "server.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "gn-booklist": "thetmkay/booklist",
     "gn-components": "thetmkay/gn-components",
     "gn-resume": "thetmkay/resume",
-	"gn-teaching":"thetmkay/teaching",
+    "gn-teaching": "thetmkay/teaching",
     "nunjucks": "^1.1.0",
     "subdomain": "thetmkay/subdomain"
   }
