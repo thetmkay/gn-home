@@ -14,4 +14,5 @@ cp -rp views .clone/
 cd .clone
 find . | grep .git | xargs rm -rf
 rsync -avz -e "ssh" ./* server@georgenishimura.com:/usr/share/nginx/html/ 
+ssh server@georgenishimura.com pm2 restart georgenishimura.com 
 
